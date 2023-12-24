@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>二八轮动</title>
+    <style>
+        body {
+            /* background-color: #232729; */
+            color: rgb(0, 0, 0);
+            font-family: Arial, sans-serif;
+        }
+        
+        .container {
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+            /* padding-top: 4rem; */
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        /* input[type=text] {
+            width: 100%;
+            height: 2rem;
+            border-radius: 0.25rem;
+            border: none;
+            outline: ;
+            box-shadow: 0px 0px 6px rgba(255, 255, 255, 0.2);
+            transition: all 0.2s ease-in-out;
+        } */
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            font-size: 16px;
+            margin-bottom: 20px; */
+            /* display: inline-block;
+            /* float: left; */
+        }
+        .table_container{
+            position: relative;
+            width: 95%;
+            /* display: flex; */
+            /* top: 100px; */
+            bottom: 5px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 2em;
+        }
+        
+        th,
+        td {
+            padding: 8px;
+            text-align: center;
+            vertical-align: middle;
+            border-top: 1px solid #ddd;
+        }
+        
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+
+        button {
+            width: 100%;
+            height: 2rem;
+            border-radius: 0.25rem;
+            border: 5px;
+            outline: 5px;
+            cursor: pointer;
+            background-color: none;
+            color: rgb(0, 0, 0);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            transition: all 0.2s ease-in-out;
+        }
+
+        button:hover,
+        button:focus {
+            background-color: rgb(5, 140, 250);
+            /* color: black; */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- <h1>参数设置</h1> -->
+        <label for="businessType">监控指数代码:</label>
+        <input type="text" id="name"><br>
+        <label for="transactionName">区间长度:</label>
+        <input type="text" id="date_range"><br>
+        <button type="submit" id="confirm">提交参数</button><br><br>
+        <button type="submit" id="calculate">计算</button>
+    <br><br>
+</div>
+<div class="table_container">
+    <table id="panel" style="text-align:center;">
+        <thead>
+            <tr>
+                <th>指数名称</th>
+                <!-- <th>指数代码</th> -->
+                <th>统计区间</th>
+                <th>区间涨跌幅</th>
+            </tr>
+        </thead>
+        <tbody id="panel_content">
+        </tbody>
+    </table>
+</div>
+
+
+</body>
+</html>
